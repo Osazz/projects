@@ -1,0 +1,35 @@
+Contact Book
+
+- Commandline
+- Front end
+
+
+Information to collect and store: Name, address, phone number, date and email address
+
+
+Actions Needed: Save, edit/update, delete and search
+
+
+python functions to use:
+ - argparse/click command-line (to collect input from commandline)
+ - SQLite (sqlite3)
+
+
+Extra Challenge: find online storage platform and backup db regularly  (cron job/systemd)
+
+
+Defect 01 : split  address variable to better reduce sql injection problem
+
+    current
+    address: apt 43, 19 forest hill road, fredericton. New Brunswick Canada E3B4J9
+
+    Solution:
+    street number: 19 (integer)
+    street name: forest hill road (string)
+    apartment/suit number: 43 (alphanumeric (we can have 43A/43B))
+    Town: Fredericton (string)
+    state / province : New Brunswick (string)
+    Country  : Canada (string)
+    postal code:  E3B4J9  (alphanumeric)
+
+
